@@ -529,9 +529,55 @@ export default function Home() {
   </div>
 </section>
 
+      {/* FAQ Section */}
+<section id="faq" className="bg-gray-50 px-6 py-20">
+  <div className="max-w-4xl mx-auto">
+    <div className="text-center mb-12">
+      <p className="text-blue-600 font-semibold">FAQS</p>
+      <h2 className="text-4xl font-bold mt-2">Frequently Asked Questions</h2>
+    </div>
+
+    <div className="space-y-4">
+      <details className="group bg-white p-6 rounded-2xl border cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+        <summary className="flex justify-between items-center font-bold text-lg">
+          How much time does it take to build a website?
+          <span className="transition group-open:rotate-180">
+            <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+          </span>
+        </summary>
+        <p className="text-gray-600 mt-4 leading-relaxed">
+          For a standard business website, it usually takes 3 to 7 days. E-commerce or custom applications may take 2 to 4 weeks depending on the requirements.
+        </p>
+      </details>
+      <details className="group bg-white p-6 rounded-2xl border cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+        <summary className="flex justify-between items-center font-bold text-lg">
+          Do you provide domain and hosting?
+          <span className="transition group-open:rotate-180">
+            <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+          </span>
+        </summary>
+        <p className="text-gray-600 mt-4 leading-relaxed">
+          Yes! We provide complete end-to-end solutions. We will help you choose the best domain name and provide secure, fast hosting for your website.
+        </p>
+      </details>
+      <details className="group bg-white p-6 rounded-2xl border cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+        <summary className="flex justify-between items-center font-bold text-lg">
+          Will my website be mobile-friendly?
+          <span className="transition group-open:rotate-180">
+            <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+          </span>
+        </summary>
+        <p className="text-gray-600 mt-4 leading-relaxed">
+          Absolutely. All our websites are 100% responsive and look perfect on mobile phones, tablets, and desktop computers.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
       {/* Contact */}
-<section id="contact" className="bg-gray-50 px-6 py-20">
-  <div className="max-w-5xl mx-auto">
+<section id="contact" className="bg-white px-6 py-20">
+  <div className="max-w-6xl mx-auto">
 
     <div className="text-center">
       <p className="text-blue-600 font-semibold">
@@ -544,54 +590,77 @@ export default function Home() {
 
       <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
         Need a website, digital service, AI automation or IT support?
-        Contact us and get a free consultation.
+        Fill out the form below or contact us on WhatsApp for a free consultation.
       </p>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-6 mt-12">
-
-      {/* WhatsApp */}
-      <div className="bg-white rounded-2xl p-8 border">
-        <div className="text-4xl">💬</div>
-
-        <h3 className="text-2xl font-bold mt-4">
-          WhatsApp
-        </h3>
-
-        <p className="text-gray-600 mt-2">
-          Chat with us directly on WhatsApp.
-        </p>
-
-        <a
-          href="https://wa.me/917982957296?text=Hello%20Ajay%20Digital%20%26%20IT%20Solutions,%20I%20want%20to%20know%20about%20your%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6 bg-green-600 text-white px-6 py-3 rounded-xl font-bold"
-        >
-          Chat on WhatsApp →
-        </a>
+    <div className="grid md:grid-cols-2 gap-10 mt-12">
+      
+      {/* Contact Form */}
+      <div className="bg-gray-50 rounded-2xl p-8 border">
+        <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+        <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.'); }}>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+            <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-600" required />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" placeholder="john@example.com" className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-600" required />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp Number</label>
+            <input type="tel" placeholder="+91 98765 43210" className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-600" required />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Your Requirement</label>
+            <textarea rows={4} placeholder="Tell us about your business and what you need..." className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+          </div>
+          <button type="submit" className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition">
+            Send Message
+          </button>
+        </form>
       </div>
 
-      {/* Free Consultation */}
-      <div className="bg-white rounded-2xl p-8 border">
-        <div className="text-4xl">🚀</div>
+      {/* Direct Contact Options */}
+      <div className="flex flex-col gap-6">
+        {/* WhatsApp */}
+        <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100 flex-1">
+          <div className="text-4xl mb-4">💬</div>
+          <h3 className="text-2xl font-bold">
+            Chat on WhatsApp
+          </h3>
+          <p className="text-gray-600 mt-2 mb-6">
+            Want a quick reply? We are available on WhatsApp to discuss your requirements instantly.
+          </p>
+          <a
+            href="https://wa.me/917982957296?text=Hello%20Ajay%20Digital%20%26%20IT%20Solutions,%20I%20want%20to%20know%20about%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-green-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-700 transition"
+          >
+            Message on WhatsApp →
+          </a>
+        </div>
 
-        <h3 className="text-2xl font-bold mt-4">
-          Free Consultation
-        </h3>
-
-        <p className="text-gray-600 mt-2">
-          Tell us about your business and we'll discuss your requirements.
-        </p>
-
-        <a
-          href="https://wa.me/917982957296?text=Hello%20Ajay%20Digital%20%26%20IT%20Solutions,%20I%20want%20a%20free%20consultation."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold"
-        >
-          Get Free Consultation →
-        </a>
+        {/* Free Consultation */}
+        <div className="bg-purple-50 rounded-2xl p-8 border border-purple-100 flex-1">
+          <div className="text-4xl mb-4">🚀</div>
+          <h3 className="text-2xl font-bold">
+            Book Free Consultation
+          </h3>
+          <p className="text-gray-600 mt-2 mb-6">
+            Not sure what you need? Let's have a quick chat and figure out the best digital strategy for you.
+          </p>
+          <a
+            href="https://wa.me/917982957296?text=Hello%20Ajay%20Digital%20%26%20IT%20Solutions,%20I%20want%20a%20free%20consultation."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition"
+          >
+            Get Free Consultation →
+          </a>
+        </div>
       </div>
 
     </div>
